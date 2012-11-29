@@ -1,0 +1,9 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:entry title="${%Oracle SSO  Server URL}" >
+        <f:textbox field="oracleSSOURL" />
+    </f:entry>
+    <f:entry title="${%Hudson Host Name}" >
+        <f:textbox field="hudsonHostName" default="${if (request.serverPort == 80) request.serverName; else request.serverName + ':' + request.serverPort;}"/>
+    </f:entry>  
+</j:jelly>

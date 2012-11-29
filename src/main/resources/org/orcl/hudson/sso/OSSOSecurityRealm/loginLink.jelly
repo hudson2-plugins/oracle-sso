@@ -1,0 +1,7 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler">
+    <j:invokeStatic var="from" className="java.net.URLEncoder" method="encode">
+    <j:arg value="${request.requestURI}"/>
+    <j:arg value="UTF-8"/>
+  </j:invokeStatic>
+  <a style="color:inherit" href="${app.securityRealm.loginUrl}?from=${from}" title="Oracle SSO Login"><b>${%SSO login}</b></a>
+</j:jelly>
